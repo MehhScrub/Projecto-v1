@@ -1,0 +1,12 @@
+#firstdiv {
+  display: inline-block;
+  border: 2px solid grey;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+label {
+  display: block;
+}
