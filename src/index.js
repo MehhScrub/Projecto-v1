@@ -8,7 +8,7 @@ import Profile from "./Profile";
 import ProfileBS from "./ProfileBS";
 import "bootstrap/dist/css/bootstrap.css";
 import ProfileFlex from "./ProfileFlex";
-import Testing from "./Testing";
+import Testing from "./starrating/Testing";
 import TestingPag from "./pagination/TestingPag";
 
-ReactDOM.render(<TestingPag />, document.getElementById("root"));
+ReactDOM.render(<ProfileFlex />, document.getElementById("root"));

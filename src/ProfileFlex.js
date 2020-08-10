@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import UserReview from "./components/UserReview";
 import RoundPic from "./components/RoundPic";
+import StarRating from "./starrating/StarRating";
 
 class ProfileBS extends Component {
   state = {
@@ -65,8 +66,8 @@ class ProfileBS extends Component {
                 <label style={lblStyle}>{this.state.telnumeris}</label>
               </li>
               <li>
-                <FaRegStar />
-                <label style={lblStyle}>Rating</label>
+                {/* <FaStar /> */}
+                <StarRating />
               </li>
             </ul>
           </div>
@@ -98,7 +99,9 @@ class ProfileBS extends Component {
           <div id="reviewsname">
             <ul>
               <li>5.0</li>
-              <li>RatingStars</li>
+              <li>
+                <StarRating />
+              </li>
               <li>102 atsiliepimai</li>
             </ul>
             <button className="btn btn-outline-secondary">
