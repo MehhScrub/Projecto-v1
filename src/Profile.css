@@ -108,7 +108,7 @@ hr {
 
 .UserReview {
   display: flex;
-  border: 2px solid black;
+  border: 2px solid rgba(221, 221, 221, 0.5);
   padding: 10px;
   height: min-content;
 }
@@ -129,6 +129,10 @@ hr {
 #searchas {
   display: flex;
   justify-content: flex-end;
+}
+
+#searchas form {
+  display: flex;
 }
 
 #vvardas {
@@ -156,8 +160,8 @@ hr {
 }
 
 #aprasymoinfo p {
-  height: 200px;
-  overflow-y: scroll;
+  height: 10rem;
+  overflow-y: auto;
   scrollbar-width: none;
 }
 

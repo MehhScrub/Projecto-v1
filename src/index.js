@@ -9,5 +9,6 @@ import ProfileBS from "./ProfileBS";
 import "bootstrap/dist/css/bootstrap.css";
 import ProfileFlex from "./ProfileFlex";
 import Testing from "./Testing";
+import TestingPag from "./pagination/TestingPag";
 
-ReactDOM.render(<ProfileFlex />, document.getElementById("root"));
+ReactDOM.render(<TestingPag />, document.getElementById("root"));
