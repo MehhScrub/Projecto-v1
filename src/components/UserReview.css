@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+}
+li {
+  padding: 5px 32px 5px 16px;
+}
+
+.UserReview {
+  /* border: 2px solid gray; */
+  display: flex;
+  /* flex-direction: row; */
+  padding: 10px;
+}

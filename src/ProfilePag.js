@@ -10,7 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./components/Profile.css";
+import "./components/ProfileBS.css";
+import Pagination from "./paginationcomponent/TestingPag2";
 
 class ProfileBS extends Component {
   state = {
@@ -27,6 +28,7 @@ class ProfileBS extends Component {
           "https://images.unsplash.com/photo-1488654715439-fbf461f0eb8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
         comvardas: "Jonas1",
         commentbox: "Pirmas komentaras",
+        urating: "4",
       },
       {
         id: 2,
@@ -34,6 +36,7 @@ class ProfileBS extends Component {
           "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
         comvardas: "Jonas2",
         commentbox: "Antras komentaras",
+        urating: "5",
       },
       {
         id: 3,
@@ -41,46 +44,51 @@ class ProfileBS extends Component {
           "https://images.unsplash.com/photo-1596568960638-96244807ed52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80",
         comvardas: "Jonas3",
         commentbox: "Trecias komentaras",
+        urating: "3",
       },
     ],
   };
-
   render() {
     return (
-      <div className="Profile">
-        <div className="upperinfo">
-          <div
-            id="aprasymofoto"
-            className="container"
-            //style={{ width: "30%", background: "green" }}
-          >
-            <RoundPic picLink={this.state.nuotrauka} picSize="size--large" />
-          </div>
-          <div id="aprasymoinfo" className="container">
-            <div>
-              <label id="vvardas">{this.state.vardas}</label>
+      <div id="Profile" className="container">
+        {/* UPPER INFO */}
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-3 col-lg-4 col-auto col-lg mx-auto">
+              <RoundPic picLink={this.state.nuotrauka} picSize="size--large" />
             </div>
-            <div>
-              <p id="aaprasymas">{this.state.aprasymas}</p>
+            <div id="aprasymoinfo" className="col-xl-9 col-lg-8">
+              <div className="column">
+                <div className="row-lg-4">
+                  <label id="vvardas">{this.state.vardas}</label>
+                </div>
+                <div className="row-lg-4">
+                  <p id="aaprasymas">{this.state.aprasymas}</p>
+                </div>
+                <div className="row-lg-4">
+                  <ul>
+                    <li>
+                      <button className="btn btn-outline-secondary">
+                        Susisiekti
+                      </button>
+                    </li>
+                    <li>
+                      <FaPhoneAlt />
+                      <label style={lblStyle}>{this.state.telnumeris}</label>
+                    </li>
+                    <li className="d-none d-sm-block">
+                      {/* <FaStar /> */}
+                      <StarRating />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <ul>
-              <li>
-                <button className="btn btn-outline-secondary">
-                  Susisiekti
-                </button>
-              </li>
-              <li>
-                <FaPhoneAlt />
-                <label style={lblStyle}>{this.state.telnumeris}</label>
-              </li>
-              <li>
-                {/* <FaStar /> */}
-                <StarRating />
-              </li>
-            </ul>
           </div>
         </div>
-        <div className="cardsinfo">
+
+        {/* ITEMS DIV */}
+        <div className="container">
           <label id="chaptername">Nuomojami daiktai</label>
           <div id="searchas">
             <form>
@@ -88,14 +96,12 @@ class ProfileBS extends Component {
                 className="searchinput"
                 type="text"
                 name="title"
-                // style={{ flex: "10" }}
                 placeholder="Search..."
               />
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-outline-secondary btn-sm"
-                // style={{ flex: "1" }}
+                className="btn btn-outline-secondary"
               ></input>
             </form>
           </div>
@@ -103,32 +109,30 @@ class ProfileBS extends Component {
             <label>Item cards go here</label>
           </div>
         </div>
-        <div className="commentsinfo">
-          <label id="chaptername">Atsiliepimai</label>
-          <div id="reviewsname">
-            <ul>
-              <li>5.0</li>
-              <li>
-                <StarRating />
-              </li>
-              <li>102 atsiliepimai</li>
-            </ul>
-            {/* <button className="btn btn-outline-secondary">
-              Rusiuoti pagal auksciausi
-            </button> */}
-            {/* <div className="dropdown">
-              <button className="btn btn-outline-secondary">Sort By</button>
-              <div className="dropdown-content">
-                <a href="#">First</a>
-                <a href="#">Second</a>
-                <a href="#">Third</a>
-                <a href="#">Fourth</a>
+
+        {/* REVIEWS DIV */}
+        <div className="container">
+          <div className="commentsinfo">
+            <label id="chaptername">Atsiliepimai</label>
+            <div id="reviewsname">
+              <div className="row">
+                <div className="col-xl-4 col-lg-5">
+                  <div className="row">
+                    <div className="col-sm-6 col-3">102 atsiliepimai</div>
+                    <div className="col-sm-6 col-9">
+                      <StarRating />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-8 col-lg-7 d-flex float-right">
+                  <SortByBtn />
+                </div>
               </div>
-            </div> */}
-            <SortByBtn />
+            </div>
+
+            <UserReview comments={this.state.comments} />
+            <Pagination />
           </div>
-          {/* <label>User comments go here</label> */}
-          <UserReview comments={this.state.comments} />
         </div>
       </div>
     );
@@ -142,10 +146,22 @@ const lblStyle = {
 export default ProfileBS;
 
 {
-  /* <img
-              src={this.state.nuotrauka}
-              width="250px"
-              height="250px"
-              style={{ borderRadius: "50%" }}
-            /> */
+  /* <div id="reviewsname">
+              <div className="row">
+                <div className="col-xl-6 col-lg-8">
+                  <div className="row">
+                    <div className="col-sm-4 col-3">
+                      5.0 <StarRating />
+                    </div>
+                    <div className="col-sm-4 d-none d-sm-block">
+                      <StarRating />
+                    </div>
+                    <div className="col-sm-4 col-9">102 atsiliepimai</div>
+                  </div>
+                </div>
+                <div className="col-xl-6 col-lg-4 d-flex float-right">
+                  <SortByBtn />
+                </div>
+              </div>
+            </div> */
 }
