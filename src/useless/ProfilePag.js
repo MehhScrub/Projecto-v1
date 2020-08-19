@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { FaPhoneAlt, FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import UserReview from "./components/UserReview/UserReview";
+import UserReview from "../components/UserReview/UserReview";
 import RoundPic from "./components/RoundPic";
-import StarRating from "./starrating/StarRating";
+import StarRating from "../starrating/StarRating";
 import "./components/dropbtn.css";
 import SortByBtn from "./components/sorbybtn";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,7 +11,7 @@ import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/ProfileBS.css";
-import Pagination from "./paginationcomponent/TestingPag2";
+import Pagination from "../paginationcomponent/TestingPag2";
 
 class ProfileBS extends Component {
   state = {
