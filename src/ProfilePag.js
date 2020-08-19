@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FaPhoneAlt, FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import UserReview from "./components/UserReview";
+import UserReview from "./components/UserReview/UserReview";
 import RoundPic from "./components/RoundPic";
 import StarRating from "./starrating/StarRating";
 import "./components/dropbtn.css";

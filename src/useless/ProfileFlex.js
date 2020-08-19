@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { FaPhoneAlt, FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import UserReview from "./components/UserReview";
-import RoundPic from "./components/RoundPic";
-import StarRating from "./starrating/StarRating";
+import UserReview from "../components/UserReview/UserReview";
+import RoundPic from "../components/RoundPic";
+import StarRating from "../starrating/StarRating";
 import "./components/dropbtn.css";
-import SortByBtn from "./components/sorbybtn";
+import SortByBtn from "../components/sorbybtn";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -19,7 +19,7 @@ class ProfileBS extends Component {
     vardas: "Jonas",
     telnumeris: "Vilnius, Vilnius",
     aprasymas:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris neque in diam. Vivamus ac auctor diam. Proin tempor viverra justo, eu placerat orci blandit at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris blandit nec magna ac fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris neque in diam. Vivamus ac auctor diam. Proin tempor viverra justo, eu placerat orci blandit at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris blandit nec magna ac fringilla.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris.",
     comments: [
       {
         id: 1,

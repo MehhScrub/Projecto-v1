@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import RoundPic from "./RoundPic";
-import StarRating from "../starrating/StarRating";
+import RoundPic from "../RoundPic/RoundPic";
+import StarRating from "../../starrating/StarRating";
 import "./UserReview.css";
 
 class UserReview extends Component {

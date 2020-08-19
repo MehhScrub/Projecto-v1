@@ -1,32 +1,32 @@
 import React, { Component } from "react";
-import { FaPhoneAlt, FaStar } from "react-icons/fa";
-import { FaRegStar } from "react-icons/fa";
-import UserReview from "./components/UserReview";
-import RoundPic from "./components/RoundPic";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import UserReview from "./components/UserReview/UserReview";
+import RoundPic from "./components/RoundPic/RoundPic";
 import StarRating from "./starrating/StarRating";
-import "./components/dropbtn.css";
-import SortByBtn from "./components/sorbybtn";
+import "./components/SortByBtn/dropbtn.css";
+import SortByBtn from "./components/SortByBtn/sorbybtn";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./components/ProfileBS.css";
+import "./ProfileBS.css";
 
 class ProfileBS extends Component {
   state = {
     nuotrauka:
       "https://images.unsplash.com/photo-1593642634627-6fdaf35209f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9",
     vardas: "Jonas",
-    telnumeris: "Vilnius, Vilnius",
+    telnumeris: "Vilnius",
     aprasymas:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris neque in diam. Vivamus ac auctor diam. Proin tempor viverra justo, eu placerat orci blandit at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris blandit nec magna ac fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris neque in diam. Vivamus ac auctor diam. Proin tempor viverra justo, eu placerat orci blandit at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris blandit nec magna ac fringilla.",
+      "APRASYMAS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in eleifend ligula, ac dapibus ex. Mauris malesuada, felis sit amet viverra vestibulum, lectus lectus elementum quam, et convallis mauris neque in diam.",
     comments: [
       {
         id: 1,
         rnuotrauka:
           "https://images.unsplash.com/photo-1488654715439-fbf461f0eb8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
         comvardas: "Jonas1",
-        commentbox: "Pirmas komentaras",
+        commentbox:
+          "Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras Pirmas komentaras ",
         urating: "4",
       },
       {
@@ -72,7 +72,7 @@ class ProfileBS extends Component {
                       </button>
                     </li>
                     <li>
-                      <FaPhoneAlt />
+                      <FaMapMarkerAlt />
                       <label style={lblStyle}>{this.state.telnumeris}</label>
                     </li>
                     <li className="d-none d-sm-block">

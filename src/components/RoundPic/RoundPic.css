@@ -3,6 +3,11 @@
   height: 50px;
 }
 
+.size--normal {
+  width: 75px;
+  height: 75px;
+}
+
 .size--medium {
   width: 150px;
   height: 150px;

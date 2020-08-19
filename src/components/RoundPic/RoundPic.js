@@ -4,7 +4,12 @@ import "./RoundPic.css";
 //picSize - nuotraukos dydis
 //picLink - nuotraukos link'as
 
-export const STYLES = ["size--small", "size--medium", "size--large"];
+export const STYLES = [
+  "size--small",
+  "size--normal",
+  "size--medium",
+  "size--large",
+];
 
 export const RoundPic = ({ picSize, picLink }) => {
   const checkPicSize = STYLES.includes(picSize) ? picSize : STYLES[0];

@@ -45,8 +45,7 @@
 
 #aaprasymas {
   height: 10rem;
-  overflow-y: auto;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 /* ITEMS DIV */
@@ -88,3 +87,10 @@
 }
 
 /* 576, 768, 992, 1200 pixeliai */
+
+@media screen and (max-width: 768px) {
+  #aaprasymas {
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+}
