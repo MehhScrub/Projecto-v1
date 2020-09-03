@@ -5,6 +5,7 @@ import RoundPic from "./components/RoundPic/RoundPic";
 import StarRating from "./starrating/StarRating";
 import "./components/SortByBtn/dropbtn.css";
 import SortByBtn from "./components/SortByBtn/sorbybtn";
+import ItemCard from "./components/itemcard/ItemCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -90,22 +91,28 @@ class ProfileBS extends Component {
         <div className="container">
           <label id="chaptername">Nuomojami daiktai</label>
           <div id="searchas">
-            <form>
+            <div className="input-group">
               <input
-                className="searchinput"
                 type="text"
-                name="title"
-                placeholder="Search..."
-              />
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-outline-secondary"
+                className="form-control"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="button-addon1"
               ></input>
-            </form>
+              <div className="input-group-append">
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon1"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
           </div>
           <div id="itemcardsbox">
             <label>Item cards go here</label>
+            <ItemCard />
           </div>
         </div>
 
@@ -115,15 +122,14 @@ class ProfileBS extends Component {
             <label id="chaptername">Atsiliepimai</label>
             <div id="reviewsname">
               <div className="row">
-                <div className="col-xl-4 col-lg-5">
-                  <div className="row">
-                    <div className="col-sm-6 col-3">102 atsiliepimai</div>
-                    <div className="col-sm-6 col-9">
-                      <StarRating />
-                    </div>
-                  </div>
+                <div className="col-xl-2 col-md-3 col-sm-4 d-none d-sm-block">
+                  102 atsiliepimai
                 </div>
-                <div className="col-xl-8 col-lg-7 d-flex float-right">
+                <div className="col-xl-3 col-md-3 col-sm-4 col-8">
+                  <StarRating />
+                </div>
+
+                <div className="col-xl-7 col-md-6 col-sm-4 col-4">
                   <SortByBtn />
                 </div>
               </div>
@@ -158,6 +164,26 @@ export default ProfileBS;
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-4 d-flex float-right">
+                  <SortByBtn />
+                </div>
+              </div>
+            </div> */
+}
+
+{
+  /* <div id="reviewsname">
+              <div className="row">
+                <div className="col-xl-4 col-lg-5 col-md-6 ">
+                  <div className="row">
+                    <div className="col-sm-6 col-3 d-none d-md-block">
+                      102 atsiliepimai
+                    </div>
+                    <div className="col-sm-6 col-9 col-sm-12">
+                      <StarRating />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-8 col-lg-7 col-md-6">
                   <SortByBtn />
                 </div>
               </div>

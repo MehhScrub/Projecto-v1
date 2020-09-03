@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FaFilter } from "react-icons/fa";
+import "./dropbtn.css";
 
 class SortByBtn extends Component {
   render() {
@@ -12,9 +14,13 @@ class SortByBtn extends Component {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Rusiuoti pagal
+          <FaFilter />
+          <span className="rusiuotipagal">Rusiuoti pagal</span>
         </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div
+          className="dropdown-menu dropdown-menu-right"
+          aria-labelledby="dropdownMenuButton"
+        >
           <a className="dropdown-item" href="#">
             Auksciausi
           </a>

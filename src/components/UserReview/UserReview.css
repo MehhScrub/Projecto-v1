@@ -6,7 +6,7 @@ li {
 }
 
 .UserReview {
-  border: 2px solid gray;
+  border: 2px solid rgba(128, 128, 128, 0.2);
   /* flex-direction: row; */
   padding: 10px;
 }

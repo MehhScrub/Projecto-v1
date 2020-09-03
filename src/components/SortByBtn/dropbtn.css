@@ -35,3 +35,9 @@
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+
+@media screen and (max-width: 768px) {
+  .rusiuotipagal {
+    display: none;
+  }
+}

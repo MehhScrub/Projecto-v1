@@ -3,12 +3,8 @@
   font-size: 20px;
 }
 
-.container {
-  /* width: 50%; */
-  /* height: 30%; */
-  /* background: green; */
-  /* padding: 20px; */
-  /* background: greenyellow; */
+body {
+  padding: 20px 0px 20px 0px;
 }
 
 /* MISCELLANEOUS */
@@ -55,8 +51,6 @@
 }
 
 #searchas {
-  display: flex;
-  justify-content: flex-end;
 }
 
 #searchas form {
